@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPEVision - Detector de EPIs</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <img src="/static/img/PPEVision.png" alt="Logo da PPEVision">
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#quemsomos">Quem Somos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="/static/html/login.html" class="btn-login"><i class="fas fa-user"></i> Login</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="home">
+      <div class="container">
+        <div class="card home">
+          <h1>Bem-vindo ao PPEVision</h1>
+          <p>Sistema inteligente de detecção de uso de EPIs em áreas de risco</p>
+
+          <video class="video-section" autoplay muted loop playsinline>
+            <source src="/static/img/ppevision.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeo.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container">
+        <div class="card container-flex">
+          <div class="texto">
+            <h2>Sobre o Projeto</h2>
+            <p>
+              O <strong>PPEVision</strong> é uma solução inovadora que combina tecnologia de ponta e inteligência artificial para promover ambientes de trabalho mais seguros. Nosso sistema é capaz de monitorar, em tempo real, áreas industriais, canteiros de obras e outros locais de risco, identificando automaticamente quando um colaborador está sem capacete de segurança. Ao detectar qualquer violação, o <strong>PPEVision</strong> emite alertas instantâneos para a equipe responsável, permitindo uma resposta rápida e eficaz. Além disso, o sistema registra imagens e gera relatórios que auxiliam na análise preventiva de riscos, fortalecendo a cultura de segurança nas empresas.
+            </p>
+          </div>
+          <div class="imagem">
+            <img src="/static/img/projeto2.jpg" alt="Funcionário com capacete no canteiro" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="quemsomos">
+      <div class="container">
+        <div class="card container-flex reverse">
+          <div class="imagem">
+            <img src="/static/img/Gemini_Generated_Image_ae0nkgae0nkgae0n.png" alt="Equipe PPEVision trabalhando unida" loading="lazy">
+          </div>
+          <div class="texto">
+            <h2>Quem Somos</h2>
+            <p>
+              Somos uma equipe multidisciplinar formada por desenvolvedores, engenheiros de software e especialistas em segurança do trabalho. Nosso compromisso é utilizar a tecnologia como aliada na preservação da vida e na prevenção de acidentes. Com ampla experiência em sistemas inteligentes e automação, unimos inovação, responsabilidade e visão estratégica para criar soluções eficazes, como o <strong>PPEVision</strong>. Acreditamos que cada trabalhador tem o direito de retornar para casa em segurança, e é com esse propósito que desenvolvemos ferramentas que realmente fazem a diferença.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios">
+      <div class="container">
+        <div class="card container-flex">
+          <div class="imagem">
+            <img src="/static/img/projeto4.png" alt="Benefícios do uso do sistema PPEVision" loading="lazy">
+          </div>
+          <div class="texto">
+            <h2>Benefícios do PPEVision</h2>
+            <ul class="lista-icones">
+              <li><i class="fas fa-check-circle"></i> Redução imediata de riscos no ambiente de trabalho</li>
+              <li><i class="fas fa-check-circle"></i> Monitoramento em tempo real com alertas automáticos</li>
+              <li><i class="fas fa-check-circle"></i> Registro visual e arquivamento de evidências</li>
+              <li><i class="fas fa-check-circle"></i> Fácil integração com câmeras já existentes</li>
+              <li><i class="fas fa-check-circle"></i> Interface intuitiva para gestão de alertas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aplicacoes">
+      <div class="container">
+        <div class="card container-flex reverse">
+          <div class="imagem">
+            <img src="/static/img/projeto3.jpg" alt="Onde o PPEVision pode ser usado" loading="lazy">
+          </div>
+          <div class="texto">
+            <h2>Onde o PPEVision pode ser Usado</h2>
+            <ul class="lista-icones">
+              <li><i class="fas fa-hard-hat"></i> Construção Civil</li>
+              <li><i class="fas fa-industry"></i> Indústrias e Fábricas</li>
+              <li><i class="fas fa-warehouse"></i> Armazéns e Centros de Distribuição</li>
+              <li><i class="fas fa-bolt"></i> Setor Elétrico</li>
+              <li><i class="fas fa-truck"></i> Mineração e Transporte Pesado</li>
+              <li><i class="fas fa-recycle"></i> Usinas e Setores Ambientais</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="container" style="text-align: center;">
+        <h2>Entre em Contato</h2>
+        <p>Fale com a gente para conhecer melhor o sistema ou solicitar um orçamento.</p>
+        <form class="card">
+          <label for="nome" class="sr-only">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+          <label for="email" class="sr-only">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+
+          <label for="mensagem" class="sr-only">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 PPEVision. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggleButton.addEventListener('click', () => {
+      const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+      menu.classList.toggle('active');
+      toggleButton.setAttribute('aria-expanded', !isExpanded);
+    });
+  </script>
+
+</body>
+</html>

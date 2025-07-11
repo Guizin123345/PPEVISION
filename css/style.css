@@ -1,0 +1,348 @@
+/* ===== PALETA DE CORES "TECH" ====== */
+:root {
+  --fundo-escuro: #0d1117; 
+  --cinza-card: #161b22; 
+  --borda-sutil: #30363d;
+  --azul-tech: #00bfff; 
+  --prata-metalico: #c0c0c0; 
+  --texto-principal: #e6edf3; 
+  --texto-secundario: #8b949e; 
+  --branco: #ffffff;
+
+  --sombra-suave: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --raio-borda: 10px;
+  --transicao: all 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--fundo-escuro);
+  color: var(--texto-principal);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ==== ESTRUTURA E UTILITÁRIOS ==== */
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.card {
+  background-color: var(--cinza-card);
+  border-radius: var(--raio-borda);
+  border: 1px solid var(--borda-sutil); 
+  padding: 40px;
+  animation: fadeIn 1s ease both;
+}
+
+/* ======== HEADER E MENU (VERSÃO FINAL MINIMALISTA) ========== */
+
+header {
+  background-color: rgba(22, 27, 34, 0.8); 
+  backdrop-filter: blur(10px);
+  padding-block: 6px; /* Redução final da altura */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--borda-sutil);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 100px; /* Redução final do logo */
+  transition: transform 0.3s;
+  display: block;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 10px; /* Redução final do espaçamento */
+}
+
+.menu a {
+  color: var(--texto-principal);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px; /* Redução final da fonte */
+  padding: 4px 7px; /* Redução final do preenchimento */
+  border-radius: 4px;
+  transition: var(--transicao);
+}
+
+.menu a:hover,
+.menu a:focus {
+  background-color: var(--azul-tech);
+  color: var(--fundo-escuro);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.btn-login {
+  background-color: var(--azul-tech);
+  color: var(--fundo-escuro);
+  padding: 4px 8px; /* Redução final do preenchimento */
+  border-radius: var(--raio-borda);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px; /* Redução final da fonte */
+  transition: var(--transicao);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-login:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--texto-principal);
+  background: none;
+  border: none;
+}
+
+/* ======== CONTEÚDO GERAL ========= */
+
+section {
+  padding-block: 40px;
+}
+
+.home {
+  text-align: center;
+}
+
+h1, h2 {
+  color: var(--texto-principal);
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  animation: slideIn 0.7s ease-out;
+  color: var(--prata-metalico);
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: var(--azul-tech);
+  display: block;
+  margin-top: 10px;
+}
+
+.video-section {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  border-radius: var(--raio-borda);
+  display: block;
+  margin-inline: auto;
+  margin-top: 20px;
+  border: 1px solid var(--borda-sutil);
+}
+
+.container-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.container-flex.reverse {
+  flex-direction: row-reverse;
+}
+
+.container-flex .texto {
+  flex: 1 1 50%;
+  color: var(--texto-secundario);
+}
+
+.container-flex .imagem {
+  flex: 1 1 40%;
+}
+
+.container-flex .imagem img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--raio-borda);
+  border: 1px solid var(--borda-sutil);
+}
+
+
+/* =========== COMPONENTES =========== */
+
+
+.lista-icones {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lista-icones li {
+  margin-block: 12px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lista-icones li i {
+  color: var(--azul-tech);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin-inline: auto;
+  animation: fadeInUp 0.8s ease;
+}
+
+form input,
+form textarea {
+  background-color: var(--fundo-escuro);
+  color: var(--texto-principal);
+  padding: 10px 14px;
+  border: 1px solid var(--borda-sutil);
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--azul-tech);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.2);
+}
+
+form textarea {
+  min-height: 120px;
+}
+
+form button {
+  background-color: var(--azul-tech);
+  color: var(--fundo-escuro);
+  font-weight: 700;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+  align-self: flex-end;
+  transition: var(--transicao);
+}
+
+form button:hover,
+form button:focus {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* ============ RODAPÉ ============= */
+
+footer {
+  background-color: var(--cinza-card);
+  color: var(--texto-secundario);
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+  border-top: 1px solid var(--borda-sutil);
+}
+
+/* =========== ANIMAÇÕES =========== */
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* =========== RESPONSIVO ========== */
+
+@media (max-width: 768px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--cinza-card);
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--borda-sutil);
+    border-bottom-left-radius: var(--raio-borda);
+    border-bottom-right-radius: var(--raio-borda);
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .container-flex,
+  .container-flex.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container-flex.reverse h2::after,
+  .container-flex h2::after {
+    margin-inline: auto;
+  }
+}
